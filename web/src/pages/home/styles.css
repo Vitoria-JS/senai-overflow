@@ -30,8 +30,9 @@
         font-size: 25px;
         letter-spacing: 5px;
         text-align: center;
+        align-self: center;
 
-        text-shadow: 0px 0px 3px var(--white) 0px 0px 5px var(--white);
+        text-shadow: 0px 0px 3px var(--white), 0px 0px 5px var(--white);
         cursor: default;
         transition: 0.8s;
     }
@@ -61,10 +62,16 @@
         height: 100px;
         border-radius: 50px;
     }
-    .profile a{
+    .profile label{
         margin-top: 5px;
         font-size: 15px;
         color: var(--gray);
+        letter-spacing: 0;
+        cursor: pointer;
+        transition: 0.2s;
+    }
+    .profile label:hover{
+        color: var(--red);
     }
     .profile strong{
         margin-top: 25px;
@@ -79,6 +86,7 @@
         margin-top: 10px;
         display: flex;
         overflow-y: auto;
+        flex-direction: column;
     }
     
     ::-webkit-scrollbar-track{
@@ -122,23 +130,23 @@
     .card-post header .icon{
         margin-left: 10px;
     }
-    .card-post body{
+    .card-post section{
         margin-top: 10px;
         background-color: var(--secondary);
         display: flex;
         flex-direction: column;
     }
-    .card-post body strong{
+    .card-post section strong{
         font-size: 18px;
         font-weight: 500;
     }
-    .card-post body p{
+    .card-post section p{
         margin-top: 5px;
         font-size: 16px;
         font-weight: 500;
     }
 
-    .card-post body img{
+    .card-post section img{
         margin-top: 10px;
         max-width: 100%;
         align-self: center;
@@ -147,9 +155,17 @@
     .card-post footer{
         margin-top: 10px;
     }
+    .card-post footer p{
+        margin-top: 5px;
+    }
     .card-post footer h1{
         font-size: 16px;
         font-weight: 500;
+        cursor: pointer;
+        transition: 0.2s;
+    }
+    .card-post footer h1:hover{
+        color: var(--red);
     }
     .card-post footer section header p{
         margin-top: 0;
@@ -164,4 +180,61 @@
         margin-top: 10px;
         font-size: 14px;
         margin-left: 10px;
+    }
+    .card-post footer .novo-comentario{
+        width: 100%;
+        margin-top: 5px;
+        display: flex;
+    }
+    .card-post footer .novo-comentario textarea{
+        flex: 1;
+        height: 30px;
+    }
+    .nova-postagem{
+        width: 600px;
+        height: fit-content;
+        padding: 10px;
+        background-color: var(--primary);
+        border-radius: 6px;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+    }
+    .nova-postagem h1{
+        color: var(--white);
+        font-weight: 500;
+        text-align: center;
+    }
+    .nova-postagem label{
+        margin-top: 10px;
+    }
+
+    .nova-postagem label em{
+        font-size: 14px;
+        font-style: normal;
+    }
+    .nova-postagem textarea{
+        height: 100px;
+    }
+    .nova-postagem input[type="file"]{
+        display: none;
+    }
+    .nova-postagem span{
+        position: absolute;
+        right: 0;
+        top: 0;
+        font-size: 30px;
+        color: var(--white);
+        cursor: pointer;
+        transition: 0.2s;
+        margin-right: 5px;
+    }
+    .nova-postagem span:hover{
+        color: var(--red);
+    }
+    .actions{
+        padding-top: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }

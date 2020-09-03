@@ -5,10 +5,13 @@ export const Alert = styled.div`
     top:0;
     right: 0;
     
-    width: 200px;
+    width: 0px;
     height: 60px;
     margin: 10px;
-    background-color: var(--red);
+    z-index: 9;
+    transition: width 0.2s;
+    background-color: ${(props) =>
+    props.tipo === "sucesso" ? "var(--alertSucesso)" : "var(--alertErro)"};
     
     >h1{
         font-size: 18px;
@@ -16,4 +19,16 @@ export const Alert = styled.div`
         margin: 10px;
 
         color: var(--primary);
+    }
+
+    > span {
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin: 0px 5px;
+        cursor: pointer;;
+        font-size: 20px;
+        :hover{
+            color: var(--white);
+        }
     }`;
